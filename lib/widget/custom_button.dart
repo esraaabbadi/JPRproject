@@ -15,12 +15,18 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: onPressed,
-      icon: Icon(icon),
+      icon: Icon(
+        icon,
+        color: Color(0xFF003F54),
+      ),
       label: FittedBox(
         fit: BoxFit.scaleDown,
         child: Text(
           label,
-          style: TextStyle(fontSize: 20), // Set a large font size
+          style: TextStyle(
+            fontSize: 20,
+            color: Color(0xFF003F54),
+          ), // Set a large font size
         ),
       ),
     );

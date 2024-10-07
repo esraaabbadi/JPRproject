@@ -1,15 +1,32 @@
 import 'package:equapp/pages/daily_task.dart';
 import 'package:equapp/pages/equipmets.dart';
+import 'package:equapp/pages/login.dart';
 import 'package:equapp/widget/custom_appbar.dart';
 import 'package:equapp/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatelessWidget {
+  String getCurrentDateTime() {
+    return DateFormat('الوقت والتاريخ الحالي:  yyyy-MM-dd HH:mm')
+        .format(DateTime.now()); // Format Date and Time
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: CustomAppBar()),
+      appBar: AppBar(
+        title: CustomAppBar(),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            );
+          },
+        ),
+      ),
 
       body: Column(
         children: [
@@ -37,20 +54,19 @@ class HomePage extends StatelessWidget {
                 children: [
                   Text(
                     'بياناتك : 955555 -اسم المستخدم',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   Text(
-                    DateFormat('الوقت والتاريخ الحالي:  yyyy-MM-dd HH:mm')
-                        .format(DateTime.now()), // Format Date and Time
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    getCurrentDateTime(),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   Text(
                     'عضو من مجموعة : E',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   Text(
                     'الصلاحية الحالية : موظف بدائرة الكهرباء',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),

@@ -19,10 +19,8 @@ class AppTheme {
       ),
     ),
     textTheme: TextTheme(
-      displayLarge: TextStyle(
-          fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.brown),
-      bodyLarge: TextStyle(fontSize: 24.0, color: Colors.black87),
-      bodyMedium: TextStyle(fontSize: 20.0, color: Colors.black54),
+      // bodyLarge: TextStyle(fontSize: 24.0, color: Colors.black87),
+      bodyMedium: TextStyle(fontSize: 18, color: Colors.white),
       bodySmall: TextStyle(fontSize: 16.0, color: Colors.grey),
     ),
     buttonTheme: ButtonThemeData(
@@ -37,39 +35,39 @@ class AppTheme {
   );
 
   // Dark theme
-  static ThemeData darkTheme = ThemeData(
-    brightness: Brightness.dark, // Overall brightness
-    primarySwatch: Colors.grey, // Primary swatch in dark mode
-    hintColor: Colors.tealAccent, // Accent color for highlights in dark mode
-    scaffoldBackgroundColor: Colors.black, // Dark background color
-    appBarTheme: AppBarTheme(
-      color: Colors.black,
-      elevation: 4,
-      titleTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 20.0,
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(
-        color: Colors.white,
-      ),
-    ),
-    textTheme: TextTheme(
-      displayLarge: TextStyle(
-          fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.white),
-      bodyLarge: TextStyle(fontSize: 16.0, color: Colors.white70),
-      bodyMedium: TextStyle(fontSize: 14.0, color: Colors.white60),
-      bodySmall: TextStyle(fontSize: 12.0, color: Colors.grey),
-    ),
-    buttonTheme: ButtonThemeData(
-      buttonColor: Colors.tealAccent,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-      ),
-      textTheme: ButtonTextTheme.primary,
-    ),
-    iconTheme: IconThemeData(
-      color: Colors.tealAccent, // Icon color in dark mode
-    ),
-  );
+  // static ThemeData darkTheme = ThemeData(
+  //   brightness: Brightness.dark, // Overall brightness
+  //   primarySwatch: Colors.grey, // Primary swatch in dark mode
+  //   hintColor: Colors.tealAccent, // Accent color for highlights in dark mode
+  //   scaffoldBackgroundColor: Colors.black, // Dark background color
+  //   appBarTheme: AppBarTheme(
+  //     color: Colors.black,
+  //     elevation: 4,
+  //     titleTextStyle: TextStyle(
+  //       color: Colors.white,
+  //       fontSize: 20.0,
+  //       fontWeight: FontWeight.bold,
+  //     ),
+  //     iconTheme: IconThemeData(
+  //       color: Colors.white,
+  //     ),
+  //   ),
+  //   textTheme: TextTheme(
+  //     displayLarge: TextStyle(
+  //         fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.white),
+  //     bodyLarge: TextStyle(fontSize: 16.0, color: Colors.white70),
+  //     bodyMedium: TextStyle(fontSize: 14.0, color: Colors.white60),
+  //     bodySmall: TextStyle(fontSize: 12.0, color: Colors.grey),
+  //   ),
+  //   buttonTheme: ButtonThemeData(
+  //     buttonColor: Colors.tealAccent,
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.circular(8.0),
+  //     ),
+  //     textTheme: ButtonTextTheme.primary,
+  //   ),
+  //   iconTheme: IconThemeData(
+  //     color: Colors.tealAccent, // Icon color in dark mode
+  //   ),
+  // );
 }
