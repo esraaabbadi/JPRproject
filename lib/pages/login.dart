@@ -1,3 +1,4 @@
+import 'package:equapp/controller/Login.dart';
 import 'package:equapp/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  LoginController loginController = new LoginController();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   bool isRememberMeChecked = false;
   // Initial state for the checkbox
   @override
@@ -134,6 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                       width: double.infinity,
                       child: TextButton(
                           onPressed: () {
+                            //   loginController.checklogin();
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute<void>(
@@ -149,7 +158,8 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: Text(
                             "تسجيل الدخول",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: const Color.fromARGB(255, 85, 83, 83)),
                           )),
                     )
                   ],
