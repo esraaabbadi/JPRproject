@@ -4,10 +4,10 @@ class LoginController {
   LoginController();
 
   Future checklogin() async {
-    var body = {"{'EMPID':'90016134','PWD':'1','deviceName':'FF90016134'}"};
+    var body = {'EMPID': '90016134', 'PWD': '1', 'deviceName': 'FF90016134'};
     var allData;
     await callApi(
-            method: ApiMethod.post, endPoint: "CheckUserLoginNew", body: body)
+            method: ApiMethod.post, endPoint: "CheckUserLogin", body: body)
         .then((onValue) {
       print("onValuess $onValue");
       allData = onValue;

@@ -142,13 +142,13 @@ class _LoginPageState extends State<LoginPage> {
                       width: double.infinity,
                       child: TextButton(
                           onPressed: () {
-                            //   loginController.checklogin();
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute<void>(
-                                builder: (BuildContext context) => HomePage(),
-                              ),
-                            );
+                            loginController.checklogin();
+                            // Navigator.pushReplacement(
+                            //   context,
+                            //   MaterialPageRoute<void>(
+                            //     builder: (BuildContext context) => HomePage(),
+                            //   ),
+                            // );
                           },
                           style: TextButton.styleFrom(
                             backgroundColor: Color(

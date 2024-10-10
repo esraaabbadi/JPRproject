@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:equapp/services/check-internet.dart';
 import 'package:equapp/shared/settings.dart' as settings;
+import 'package:equapp/services/services.dart' as service;
 
 enum ApiMethod {
   get,
@@ -27,7 +28,7 @@ Future callApi(
   var responseJson;
   var response;
   var bodyApi = body;
-
+  service.setHeader(bodyApi.toString());
   await checkInternet(showConnectionPage).then((value) async {
     if (true) {
       try {
